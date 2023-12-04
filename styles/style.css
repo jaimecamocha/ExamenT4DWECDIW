@@ -1,0 +1,12 @@
+body{
+    background-image:url('../assets/imgs/goat.jpg');
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: bold;
+    background-size: cover;
+}
+
+#contenedorTitulo{
+    text-shadow: (1px, 1px, 1px, black);
+    
+}

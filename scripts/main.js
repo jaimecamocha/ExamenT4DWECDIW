@@ -18,6 +18,7 @@ export function mostrarResultado(mensaje){
 const vehiculo1 = new Vehiculo('BMW', 'CLK', 'rojo', 1992, '2400');
 
 //mostramos datos y accciones
+mostrarResultado("<h2>--VEHÍCULO--</h2>")
 vehiculo1.mostrarDatos();
 vehiculo1.arrancar();
 vehiculo1.acelerar("140");
@@ -25,7 +26,7 @@ vehiculo1.frenar();
 
 
 //creamos el vehiculo object
-const vehiculoObject = new Vehiculo({
+const vehiculoObject = ({
     marca: 'BMW',
     modelo: 'CLK',
     color: 'rojo',
@@ -44,13 +45,15 @@ console.log(localStorage.getItem("vehiculo"));
 const deportivo1 = new automovilDeportivo('Ferrari', 'Spider', 'amarillo', 2020, '4000', '500');
 
 //mostramos datos y acciones
+mostrarResultado("<h2>--DEPORTIVO--</h2>")
 deportivo1.mostrarDatos();
+mostrarResultado("<div>Potencia motor: " + deportivo1.potenciaMotor + "</div>");
 deportivo1.arrancar();
 deportivo1.acelerar("140");
 deportivo1.frenar();
 
 //creamos el deportivo object
-const deportivoObject = new automovilDeportivo({
+const deportivoObject = ({
     marca: 'Ferrari',
     modelo: 'Spider',
     color: 'amarillo',
@@ -63,8 +66,8 @@ const deportivoObject = new automovilDeportivo({
 localStorage.setItem("deportivo", JSON.stringify(deportivoObject));
 
 //borramos la marca y el modelo
-localStorage.removeItem("marca", deportivoObject);
-localStorage.removeItem("modelo", deportivoObject);
+localStorage.removeItem('marca');
+localStorage.removeItem('modelo');
 
 //limpieza del localstorage
 //localStorage.clear();
