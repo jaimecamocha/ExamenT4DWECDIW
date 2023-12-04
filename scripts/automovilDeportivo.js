@@ -3,10 +3,11 @@
 
 //imports
 import { mostrarResultado } from './main.js';
+import { Vehiculo } from './vehiculo.js';
 
 
 //clase automovilDeportivo
-export class automovilDeportivo{
+export class automovilDeportivo extends Vehiculo{
     #potenciaMotor;
 
     //constructor
@@ -19,7 +20,7 @@ export class automovilDeportivo{
     //métodos
     activarModoDeportivo(){
         const mensaje = `<p>¡Ha activado el modo deportivo!</p>`;
-        mostrarResultado += `<p>${mensaje}</p>`; 
+        mostrarResultado(mensaje);
     }
 
 

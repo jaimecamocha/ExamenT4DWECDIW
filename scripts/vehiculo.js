@@ -34,22 +34,22 @@ export class Vehiculo{
             <p>Cilindrada: ${this.#cilindrada}</p>
             `
 
-        mostrarResultado += `<p>${datos}</p>`;      
+            mostrarResultado(datos); 
     }
 
     acelerar(velocidad){
-        const mensaje = `<p>Ha acelerado hasta llegar a ${velocidad} km/h</p>`
-        mostrarResultado += `<p>${mensaje}</p>`; 
+        const mensaje = `<p>Ha acelerado hasta llegar a ${velocidad} km/h</p>`;
+        mostrarResultado(mensaje); 
     }
 
     arrancar(){
         const mensaje = `<p>Ha arrancado</p>`;
-        mostrarResultado += `<p>${mensaje}</p>`; 
+        mostrarResultado(mensaje); 
     }
 
     frenar(){
         const mensaje = `<p>Ha frenando</p>`;
-        mostrarResultado += `<p>${mensaje}</p>`; 
+        mostrarResultado(mensaje); 
     }
 
 
