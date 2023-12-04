@@ -1,6 +1,11 @@
 // JAIME FERNÁNDEZ CALVO
 // 
 
+//imports
+import { mostrarResultado } from './main.js';
+
+
+//clase Vehículo
 export class Vehiculo{
     #marca;
     #modelo;
@@ -15,6 +20,36 @@ export class Vehiculo{
         this.#color = color;
         this.#fabricacion = fabricacion;
         this.#cilindrada = cilindrada;
+    }
+
+
+    //métodos
+    mostrarDatos(){
+        const datos = `
+            <h1>Vehículo</h1>
+            <p>Marca: ${this.#marca}</p>
+            <p>Modelo: ${this.#modelo}</p>
+            <p>Color: ${this.#color}</p>
+            <p>Año fabricación: ${this.#fabricacion}</p>
+            <p>Cilindrada: ${this.#cilindrada}</p>
+            `
+
+        mostrarResultado += `<p>${datos}</p>`;      
+    }
+
+    acelerar(velocidad){
+        const mensaje = `<p>Ha acelerado hasta llegar a ${velocidad} km/h</p>`
+        mostrarResultado += `<p>${mensaje}</p>`; 
+    }
+
+    arrancar(){
+        const mensaje = `<p>Ha arrancado</p>`;
+        mostrarResultado += `<p>${mensaje}</p>`; 
+    }
+
+    frenar(){
+        const mensaje = `<p>Ha frenando</p>`;
+        mostrarResultado += `<p>${mensaje}</p>`; 
     }
 
 
