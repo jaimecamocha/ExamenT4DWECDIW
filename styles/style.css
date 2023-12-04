@@ -1,12 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Ubuntu:ital@1&family=Young+Serif&display=swap');
+
+
+p{
+    color: black;
+    font-family: Merriweather;
+    font-size: large;
+}
+
 body{
     background-image:url('../assets/imgs/goat.jpg');
     text-align: center;
     letter-spacing: 4px;
     font-weight: bold;
     background-size: cover;
+    background-attachment: no-repeat;
+    background-attachment: fixed;
 }
 
+#titulo:hover { /* cambia el color del fondo del título a rojo */ 
+    background-color: red;
+  }
+
 #contenedorTitulo{
-    text-shadow: (1px, 1px, 1px, black);
-    
+    text-shadow: #FC0 1px 0 10px;
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+span{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 38ch;
+    font-size: 20px;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, 1px 1px 0 black, -1px 1px 0 black;
+
+    animation: typing 5s infinite steps(38), blink 0.5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+}
+ 
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
 }

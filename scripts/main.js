@@ -1,5 +1,5 @@
 // JAIME FERNÁNDEZ CALVO
-// 
+// https://github.com/jaimecamocha/ExamenT4DWECDIW.git
 
 //imports
 import { Vehiculo } from "./vehiculo.js";
@@ -63,7 +63,11 @@ const deportivoObject = ({
 })
 
 //añadimos el deportivo object al localstorage
-localStorage.setItem("deportivo", JSON.stringify(deportivoObject));
+for(let key in deportivoObject){
+    if(deportivoObject.hasOwnProperty(key)){
+        localStorage.setItem(key, deportivoObject[key]);
+    }
+}
 
 //borramos la marca y el modelo
 localStorage.removeItem('marca');
